@@ -19,4 +19,7 @@
   - Why use `% 26`? The size of the english alphabet is 26 which means there are 26 letters in the english alphabet.
   - We want to make sure the encrypted letter is within the range of `[0, Size Of the Alphabet]`, so the is why we use `% 26`
 - Can use bruteforce against this not a good encryption technique.
+- Can also use `frequency-analysis`(we can analyze the frequency distribution of the letters)
+  - For example in english text some letters are more frequent than others(E, A, O, I and T)
+    - We can analyze the ciphertext and based on the most frequent letter in the ciphertext we can predict the key(so the number of shifts)
 ---
