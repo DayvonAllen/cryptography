@@ -1,7 +1,7 @@
 import string
 
 # All alphabets in uppercase
-ALPHABET = string.ascii_uppercase
+ALPHABET = string.ascii_uppercase + " " + "," + "?" + "'"
 KEY = 3
 
 
@@ -35,5 +35,7 @@ def caesar_decrypt(cipher_text):
     return plain_text
 
 
-print(caesar_encrypt("Hello"))
-print(caesar_decrypt("KHOOR"))
+message = "Hey there, how's it going?"
+encrypted_message = caesar_encrypt(message)
+print(encrypted_message)
+print(caesar_decrypt(encrypted_message))
