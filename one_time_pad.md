@@ -40,5 +40,5 @@
 - Perfect Secrecy is when `|M| = |C|` 
   - It means the ciphertext doesn't contain any information about the plaintext
   - One Time Pad implements perfect secrecy
-- Cannot use bruteforce because we will find all valid plaintexts, which contains every valid word and sentence in english(we won't be able to determine what the original message was)
+- Cannot use bruteforce to break the given ciphertext because we will find all valid plaintexts, which contains every valid word and sentence in english(we won't be able to determine what the original message was)
 ---
