@@ -12,7 +12,7 @@
   - Why use `% 26`? The size of the english alphabet is 26 which means there are 26 letters in the english alphabet.
   - We want to make sure the encrypted letter is within the range of `[0, Size Of the Alphabet]`, so the is why we use `% 26`
 - Decryption algorithm:
-  - `E(x) = (x - n) % 26`
+  - `D(x) = (x - n) % 26`
   - We have to consider all the characters in the plaintext
   - `D(x)` is the decrypted letter(x is the letter in the ciphertext).
   - We have to shift the given letter with `-n`(where n is the key)
