@@ -4,4 +4,19 @@
 - It is a type of substitution cipher: we shift every single letter in the plaintext with a fixed number of letters.
 - The key itself is the number of letters we use for shifting
 - First we assign numerical values to every letter in the alphabet to be able to use mathematical operations during encryption/decryption
+- Encryption algorithm:
+  - `E(x) = (x + n) % 26`
+  - We have to consider all the characters in the plaintext
+  - `E(x)` is the encrypted letter of the original `x` letter.
+  - We have to shift the given letter with `n`(where `n` is the key)
+  - Why use `% 26`? The size of the english alphabet is 26 which means there are 26 letters in the english alphabet.
+  - We want to make sure the encrypted letter is within the range of `[0, Size Of the Alphabet]`, so the is why we use `% 26`
+- Decryption algorithm:
+  - `E(x) = (x - n) % 26`
+  - We have to consider all the characters in the plaintext
+  - `D(x)` is the decrypted letter(x is the letter in the ciphertext).
+  - We have to shift the given letter with `-n`(where n is the key)
+  - Why use `% 26`? The size of the english alphabet is 26 which means there are 26 letters in the english alphabet.
+  - We want to make sure the encrypted letter is within the range of `[0, Size Of the Alphabet]`, so the is why we use `% 26`
+- Can use bruteforce against this not a good encryption technique.
 ---
