@@ -12,3 +12,21 @@
      1. There will be no information leak is you use this approach because every letter in the ciphertext is equally likely.
      2. Kasiski Method does not work against this.
 ---
+     
+## Pseudo-Random Number Algorithms
+- Computers are inherently deterministic, so it is impossible to define algorithms to generate true random numbers.
+- But we can generate pseudo-random numbers with these algorithms:
+  - `Middle-Square Method`
+    - Invented by John von Neumann in 1949
+    - Input is the seed, the seed should be different(like unix time)
+    - Algorithm:
+      - Multiply the seed by itself
+      - get the middle of the result
+      - the result is the seed in the next iteration
+    - The randomness of the sequence depends on the randomness of the seed exclusively. 
+  - `Mersenne Twister`
+  - `Linear Congruential Generators`
+    - `X<n + 1> = (a X<n> + c) % m`
+    - as usual, we have to define a seed which is thee `x<0>`
+    - The values of the parameters `a`, `c` and `m` determine the period
+---
