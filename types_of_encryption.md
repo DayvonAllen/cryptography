@@ -4,6 +4,7 @@
   - This type of cryptography uses a single key, the same key is used for both encryption and decryption.
   - Mathematical function + the private key is used to generate the ciphertext.
   - Ex. AES, DES, Caesar-cipher
+  - Main problem is that the key must be exchanged.
 - Asymmetric Encryption(Public Key Cryptography):
   - This type of cryptography uses a public key and private key.
   - We have to keep the private key secret but the public key should be known.

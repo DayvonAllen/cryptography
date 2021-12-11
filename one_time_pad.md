@@ -31,3 +31,14 @@
     - as usual, we have to define a seed which is thee `x<0>`
     - The values of the parameters `a`, `c` and `m` determine the period
 ---
+    
+## Shannon's Perfect Secrecy
+- It's when the size of the message space `|M|` is the same as the size of the ciphertext space `|C|` it means perfect secrecy
+- `P(M=m | C=c) = P(M=m)`
+- `M{0,1}^n` - is the message space
+- `C{0,1}^n` - is the ciphertext space
+- Perfect Secrecy is when `|M| = |C|` 
+  - It means the ciphertext doesn't contain any information about the plaintext
+  - One Time Pad implements perfect secrecy
+- Cannot use bruteforce because we will find all valid plaintexts, which contains every valid word and sentence in english(we won't be able to determine what the original message was)
+---
