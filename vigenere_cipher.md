@@ -37,11 +37,30 @@
 - We can crack this cryptographic method using dictionary attacks(brute force, not a good way) and Kasiski-algorithm(a smart approach to cracking vigenere cipher)
 ---
 
+## Most Common Letters in English
+1. A
+2. E
+3. I
+4. O
+5. T
+---
+
 ## Kasiski Algorithm
 - It was constructed by Friedrich Kasiski in 1863
 - If we know the size of the key then we can use frequency analysis in order to decrypt a given ciphertext(we will take advantage of information leaks)
 - Algorithm:
-  - We have to find the size of the key: we can analyze repeated substrings and their factors to get a good guess
-  - We can construct substrings from the ciphertext that are encrypted by the same letters
-  - We can use frequency analysis to find the letters of the keys.
+  1. We have to find the size of the key: we can analyze repeated substrings and their factors to get a good guess
+  2. We can construct substrings from the ciphertext that are encrypted by the same letters
+  3.We can use frequency analysis to find the letters of the keys(if we have the key size).
+- First, we have to find repeated substrings in the ciphertext(the size of these substrings are at least 3 letters long)
+  - By the way this is why we should learn algorithms and data structure, the `Suffix Tree` to be exact.
+- Second, is to consider the distances between these repeated substrings and find the factors of these values. 
+  - This algorithm assumes that the length of the key is the factor with the highest count
+  - Ex: `WS AY`, `HHA`, `KKLA`, presumed length will be 5 because of `WS AY`
+- Third, if we know the size of the key then we can use `frequency analysis` because `Vigenere cipher` is the same as `Caesar cipher`
+  - Of course it uses multiple sub-keys
+  - If the length of the key is `N` then we know that every `N-th` letter must have been encrypted using the same sub-key
+  - So we create substrings containing every `N-th` letter
+    - there will be `N` substrings after this operation
+- This algorithm is the reason more secure approaches are needed such as DES or AES 
 ---
