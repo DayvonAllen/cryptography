@@ -17,7 +17,7 @@
   - `D(x)` is the decrypted letter(x is the letter in the ciphertext).
   - We have to shift the given letter with `-n`(where n is the key)
   - Why use `% 26`? The size of the english alphabet is 26 which means there are 26 letters in the english alphabet.
-  - We want to make sure the encrypted letter is within the range of `[0, Size Of the Alphabet]`, so the is why we use `% 26`
+  - We want to make sure the encrypted letter is within the range of `[0, Size Of the Alphabet - 1]`, so the is why we use `% 26`
 - Can use bruteforce against this not a good encryption technique.
 - Can also use `frequency-analysis`(we can analyze the frequency distribution of the letters)
   - For example in english text some letters are more frequent than others(E, A, O, I and T)
