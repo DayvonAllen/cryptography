@@ -11,6 +11,7 @@
   2. Shift the letters in the plaintext with the random numbers in the same manner as in the vigenere cipher or caesar cipher
      1. There will be no information leak is you use this approach because every letter in the ciphertext is equally likely.
      2. Kasiski Method does not work against this.
+- `One time pad's keyspace = 26^<size of the plaintext>`
 ---
      
 ## Pseudo-Random Number Algorithms
