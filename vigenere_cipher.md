@@ -23,4 +23,25 @@
   - `x<sub i>` is the actual letter in the plaintext
   - `D<sub i>(x<sub i>)` is the decrypted letter in the ciphertext
   - In Vigenere cipher we have to use the `i-th` letter of the ket for encrypting the `i-th` letter
+``` 
+  private key equals "secret"
+  
+  Plain Text = This is just an example
+  
+  add the index of the secret letter to the current letter and shift like we are doing the caesar cipher
+  
+  Secr et Secr et secrets
+  this is just an example
+  (37 % 26)(11)(10)(35 % 26) = this(new index after adding "secr" to each char)
+``` 
+- We can crack this cryptographic method using dictionary attacks(brute force, not a good way) and Kasiski-algorithm(a smart approach to cracking vigenere cipher)
+---
+
+## Kasiski Algorithm
+- It was constructed by Friedrich Kasiski in 1863
+- If we know the size of the key then we can use frequency analysis in order to decrypt a given ciphertext(we will take advantage of information leaks)
+- Algorithm:
+  - We have to find the size of the key: we can analyze repeated substrings and their factors to get a good guess
+  - We can construct substrings from the ciphertext that are encrypted by the same letters
+  - We can use frequency analysis to find the letters of the keys.
 ---
