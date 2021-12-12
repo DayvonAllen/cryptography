@@ -20,6 +20,10 @@
      5. `Ciphertext Size`: 64 bits
 - `Circular Shift`(Bitwise rotation) - is an operator that shifts all the bits we want to shift `01001000`(first digit is the most significant digit and the last is the least significant digit) to the left then the result will be `10010000`
   - In `DES` we sometimes shift by 1, and sometimes we shift by 2.
+- `Initial Permutation` - There is a 8x8 table that has constant value in each spot, it tells us what bit should be used at a certain position
+  - Ex. if the 0x0 value is 48, that means the first bit should be the value of the 48th bit
+  - Helps us swaps the bits in the block
+  - The values in the table define th location of the given bits in the output
 ---
      
 ## How DES works
@@ -27,7 +31,7 @@
 2. Split the binary representation of the plaintext into 64 bit long blocks(64 bits of binary)
 3. Those blocks will be the input to the DES algorithm.
 4. We are going to use the 64 bits private key and the block to generate the ciphertext.
-5. We use the Initial Permutation(IP) that's going to change the location of the bits in the 64 bits block
+5. We use the `Initial Permutation`(IP) that's going to change the location of the bits in the 64 bits block
    1. We shuffle the order of the bits in the block
 6. We have to generate the 16 sub-keys
    1. Steps to generate a sub-key:
