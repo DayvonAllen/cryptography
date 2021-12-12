@@ -24,6 +24,10 @@
   - Ex. if the 0x0 value is 48, that means the first bit should be the value of the 48th bit
   - Helps us swaps the bits in the block
   - The values in the table define th location of the given bits in the output
+- `Permutation` - is a table that defines the order of the bits
+- The main advantage of `Feistel-Structures` is that encryption is very similar to decryption, the same software and hardware can be used
+- Encryption - we start with the first sub-key the second then third...
+- Decryption - We start with the last (16th) sub-key then 15th then 14th...
 ---
      
 ## How DES works
